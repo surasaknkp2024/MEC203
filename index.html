@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ระบบเบื้องหลัง</title>
+</head>
+<body style="font-family:sans-serif; text-align:center; margin-top:80px;">
+  <h2>🎯 เรียกใช้งานระบบเบื้องหลัง</h2>
+  <button onclick="callScript()">🚀 เริ่ม</button>
+  <p id="result" style="margin-top:20px;"></p>
+
+  <script>
+    async function callScript() {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbxdX1ypRK446KWNZOqLkyiJHbgGAd4On8bncF_mLMxJqS25lysyCW3uf1BCLSbwku4t/exec");
+      const text = await res.text();
+      document.getElementById("result").innerText = text;
+    }
+  </script>
+</body>
+</html>
